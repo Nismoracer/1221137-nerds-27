@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Илья Грунов](https://up.htmlacademy.ru/htmlcss/27/user/1221137).
-* Наставник: [Виктория idvikul4ik Коваленко] (https://https://htmlacademy.ru/profile/id42638).
+* Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638).
 
 ---
 
