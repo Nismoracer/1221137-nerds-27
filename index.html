@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>Студия веб-разработки «Нёрдс»</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slyle.css">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#">   
-                <img src="img/logo.svg" width="160" height="67" alt="Логотип веб-студии «Нёрдс»">  
-            </a>
+        <nav>  
+            <img src="img/logo.svg" width="160" height="67" alt="Логотип веб-студии «Нёрдс»">  
             <ul>  
-                <li><a href="index">Студия</a></li>
+                <li><a href="#">Студия</a></li>
                 <li><a href="#">Клиенты</a></li>
                 <li><a href="catalog.html">Магазин</a></li>
                 <li><a href="#">Контакты</a></li>
@@ -20,7 +20,7 @@
                 <li>
                     <a href="#">
                         <div>
-                            <img src="img/cart.svg" width="15" height="15" alt="Ярлык корзины">
+                            <img src="img/cart.svg" width="15" height="15" alt="Корзина покупок">
                             <p>Корзина</p>
                         </div>
                     </a>
@@ -30,17 +30,18 @@
     </header>
 
     <main>
-        <h1 class="visually-hidden">«Нёрдс»: Веб-сайты, приложения, презентации</h1>
+        <h1 class="visually-hidden">«Вебстудия Нёрдс»: Веб-сайты, приложения, презентации</h1>
 
         <!--Слайдер-->
 
         <section>
             <h2>Долго, дорого,  скрупулезно.</h2>
             <p>Математически выверенный дизайн  для вашего сайта или мобильного приложения.</p>
-            <span>Узнать больше</span>
+            <a href="catalog.html"><span>Узнать больше</span></a>
+
+            <!--Пока не знаю структуру, тк не знаю как будет реализовано. Буду оживлять чз JS-->
             <div>
-                <!--Смену изображений планируется реализовать через 
-                    css свойство "фон".-->
+                <img src="img/slide1.png" alt="Рекламный слайдер" width="698" height="413">
                 <ul>
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
@@ -84,7 +85,7 @@
             </ul>
             <div>
                 <figure>
-                    <img src="img/balloons.png" alt="Лого веб-студии" width="360" height="208">
+                    <img src="img/balloons.png" alt="«Вебстудия Нёрдс» - с 2004 года работаем для вас" width="360" height="208">
                     <figcaption>с 2004 года Любим точность во всем:</figcaption>
                 </figure>
             <ul>
@@ -139,13 +140,12 @@
                 <span>Nёrds design studio</span>
                 <p>191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8 </p>
                 <p>тел. +7 (812) 275-75-75</p>
-                <span><a href="form.html">напишите нам</a></span>
+                <span><a href="#">напишите нам</a></span>
             </div>
         </section>
 
-        <section class="visually-hidden">       <!--Модальное окно "Напишите нам-->
-            <h2>Форма обратной связи</h2>
-            <a href="index.html"><img src="img/close-cross.svg" alt="Закрыть окно" width="21" height="21"></a>
+        <section>       <!--Модальное окно "Напишите нам-->
+            <h2>Напишите нам</h2>
             <form action="index.html" method="POST">
                 <label for="surname">Ваше имя:</label>
                 <input type="text" name="surname" placeholder="Имя Фамилия" id="surname">
@@ -153,17 +153,19 @@
                 <input type="email" name="email" placeholder="email@example.com" id="email">
                 <label for="letter">Текст письма:</label>
                 <textarea name="letter" placeholder="В свободной форме" id="letter"></textarea>   
-                <input type="submit" value="Отправить">          
+                <button type="submit">Отправить</button>       
             </form>
+            <button type="button">Закрыть окно</button>
         </section>
         
     </main>
     <footer>
         <div>
             <ul>
-                <li><a href="">Вконтакте</a></li>
-                <li><a href="">Фейсбук</a></li>      
-                <li><a href="">Инстаграм</a></li>        
+                <!--ARIA тк текст заменится на картинки-->
+                <li><a href="" aria-label="Вконтакте">Вконтакте</a></li>
+                <li><a href="" aria-label="Фейсбук">Фейсбук</a></li>      
+                <li><a href="" aria-label="Инстаграм">Инстаграм</a></li>        
             </ul>
         </div>
         <p>Давайте дружить, это выгодно!</p>
