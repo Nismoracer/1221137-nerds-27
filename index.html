@@ -3,99 +3,106 @@
 <head>
     <meta charset="utf-8">
     <title>Студия веб-разработки «Нёрдс»</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <nav>  
+            <a class="main-logo" href="">
             <img src="img/logo.svg" width="160" height="67" alt="Логотип веб-студии «Нёрдс»">  
-            <ul>  
-                <li><a href="#">Студия</a></li>
-                <li><a href="#">Клиенты</a></li>
+            </a>
+            <ul class="site-navigation">  
+                <li><a href="" class="site-navigation-active">Студия</a></li>
+                <li><a href="">Клиенты</a></li>
                 <li><a href="catalog.html">Магазин</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="">Контакты</a></li>
             </ul>
-            <ul>
+            <ul class="user-navigation">
                 <li>
-                    <a href="#">
-                        <p>Корзина</p>
-                    </a>
+                    <a href="">Корзина</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <h1 class="visually-hidden">«Вебстудия Нёрдс»: Веб-сайты, приложения, презентации</h1>
 
         <!--Слайдер-->
 
-        <section>
+        <section class="banner-top">
             <h2>Долго, дорого,  скрупулезно.</h2>
             <p>Математически выверенный дизайн  для вашего сайта или мобильного приложения.</p>
-            <a href="catalog.html"><span>Узнать больше</span></a>
+            <a class="button-red" href="catalog.html">Узнать больше</a>
 
             <!--Пока не знаю структуру, тк не знаю как будет реализовано. Буду оживлять чз JS-->
-            <div>
+            <div class="slider">
                 <img src="img/slide1.png" alt="Рекламный слайдер" width="698" height="413">
-                <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                <ul class="pagination">
+                    <li>
+                        <a href=""><div class="pagination-item  pagination-item-current"></div></a>
+                    </li>
+                    <li>
+                        <a href=""><div class="pagination-item"></a>
+                    </li>
+                    <li>
+                        <a href=""><div class="pagination-item"></a>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <section>
+        <section class="variety">
             <h2 class="visually-hidden">Предоставляемые услуги</h2>
-            <ul>
+            <ul class="variety-list">
                 <li>
                     <h3>Веб-сайты</h3>
                     <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
                     <img src="img/laptop_logo.png" Alt="Разработка веб-сайтов" width="300" height="146">
-                    <a href="#">Заказать</a>
+                    <a href="" class="button-red">Заказать</a>
                 </li>
                 <li>
                     <h3>Приложения</h3>
                     <p>Покорите топ-10 приложений в AppStore и Google Play</p>
                     <img src="img/phone_logo.png" Alt="Создание приложений" width="300" height="146">
-                    <a href="#">Заказать</a>
+                    <a href="" class="button-green">Заказать</a>
                 </li>
                 <li>
                     <h3>Презентации</h3>
                     <p>Вы даже не подозреваете,  насколько вы изумительны!</p>
                     <img src="img/presentation_logo.png" Alt="Создание презентаций" width="300" height="146">
-                    <a href="#">Заказать</a>
+                    <a href="" class="button-yellow">Заказать</a>
                 </li>
             </ul>
         </section>
         <!--Информационный блок-->
-        <section>
+        <section class="about">
             <h2>Мы — маленькая, но гордая  дизайн-студия из Краснодара. </h2>
             <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
             <h3>Выполняем заказы на разработку:</h3>   
-            <ul>
+            <ul class="about-list">
                 <li>Веб-сайтов любой сложности</li>
                 <li>Мобильных приложений для iOS и Android</li>
                 <li>Слайдшоу и видео для корпоративных презентаций</li>
             </ul>
-            <div>
+            <div class="about-right-column">
                 <figure>
                     <img src="img/balloons.png" alt="«Вебстудия Нёрдс» - с 2004 года работаем для вас" width="360" height="208">
                     <figcaption>с 2004 года Любим точность во всем:</figcaption>
                 </figure>
-            <ul>
+            <ul class="about-right-column-list">
                 <li>
-                    <span>146%</span>
+                    <span>146<sup>%</sup></span>
                     <p>Уровень самоотдачи</p>
                 </li>
                 <li>
-                    <span>100%</span>
+                    <span>100<sup>%</sup></span>
                     <p>Соблюдение сроков</p>
                 </li>
                 <li>
-                    <span>50%</span>
+                    <span>50<sup>%</sup></span>
                     <p>Минимальная предоплата</p>
                 </li>                    
             </ul>
@@ -103,26 +110,26 @@
         </section>
 
         <!--Список проектов-->
-        <div>
+        <div class="partners">
             <h2 class="visually-hidden">Наши работы</h2>
-            <ul>
+            <ul class="partners-list">
                 <li>
                     <a href="https://htmlacademy.ru/intensive/htmlcss">
                         <img src="img/advert_1.png" alt="Выполненный проект - HTML академия" width="199" height="68">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="">
                         <img src="img/advert_2.png" alt="Выполненный проект - Барбершоп Бородинский" width="209" height="90">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="">
                         <img src="img/advert_3.png" alt="Выполненный проект- сайт Pink" width="185" height="52">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="">
                         <img src="img/advert_4.png" alt="Выполненный проект- сайт Mishka" width="173" height="74">
                     </a>
                 </li>
@@ -130,43 +137,44 @@
         </div>
         <!--Интерактивная карта с кнопкой "Напишите нам"-->
 
-        <section>
+        <section class="map">
             <h2 class="visually-hidden">Наш адрес</h2>
             <img src="img/map.png" Alt="Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8" width="1440" height="416">
-            <div>
-                <span>Nёrds design studio</span>
+            <div class="map-label">
+                <h3>Nёrds design studio</h3>
                 <p>191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8 </p>
                 <p>тел. +7 (812) 275-75-75</p>
-                <a href="#">напишите нам</a>
+                <a class="button-red" href="">напишите нам</a>
             </div>
         </section>
 
-        <section>       <!--Модальное окно "Напишите нам-->
-            <h2>Напишите нам</h2>
-            <form action="index.html" method="POST">
-                <label for="surname">Ваше имя:</label>
-                <input type="text" name="surname" placeholder="Имя Фамилия" id="surname">
-                <label for="email">Ваше e-mail:</label>
-                <input type="email" name="email" placeholder="email@example.com" id="email">
-                <label for="letter">Текст письма:</label>
-                <textarea name="letter" placeholder="В свободной форме" id="letter"></textarea>   
-                <button type="submit">Отправить</button>       
-            </form>
-            <button type="button">Закрыть окно</button>
-        </section>
-        
     </main>
-    <footer>
-        <div>
+    <footer class="main-footer">
+        <div class="main-footer-social">
             <ul>
                 <!--ARIA тк текст заменится на картинки-->
-                <li><a href="" aria-label="Вконтакте">Вконтакте</a></li>
-                <li><a href="" aria-label="Фейсбук">Фейсбук</a></li>      
-                <li><a href="" aria-label="Инстаграм">Инстаграм</a></li>        
+                <li><a class="social-button" href="" aria-label="Вконтакте">Вконтакте</a></li>
+                <li><a class="social-button" href="" aria-label="Фейсбук">Фейсбук</a></li>      
+                <li><a class="social-button" href="" aria-label="Инстаграм">Инстаграм</a></li>        
             </ul>
         </div>
-        <p>Давайте дружить, это выгодно!</p>
+        <h3>Давайте дружить, это выгодно!</h3>
         <p>Скидка 10% для друзей из социальных сетей.</p>
     </footer>
+
+    <section class="modal">       <!--Модальное окно "Напишите нам-->
+        <h2>Напишите нам</h2>
+        <form class="feedback-form" action="index.html" method="POST">
+            <label for="surname">Ваше имя:</label>
+            <input type="text" name="surname" placeholder="Имя Фамилия" id="surname">
+            <label for="email">Ваше e-mail:</label>
+            <input type="email" name="email" placeholder="email@example.com" id="email">
+            <label for="letter">Текст письма:</label>
+            <textarea name="letter" placeholder="В свободной форме" id="letter"></textarea>   
+            <button class="button-red" type="submit">Отправить</button>       
+        </form>
+        <button type="button">Закрыть окно</button>
+    </section>
+
 </body>
 </html>
