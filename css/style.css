@@ -76,7 +76,7 @@ a   {
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 .button-green    {
@@ -303,9 +303,8 @@ a   {
 }
 
 .page-container      {
-  margin: 0 auto;
   width: 360px;
-  line-height: 1px;
+  position: relative;
 }
 
 .page-header    {
@@ -313,16 +312,14 @@ a   {
 }
 
 .popup-info     {
-  width: 210px;
-  height:196px;
-  position: relative;
-  display: inline-block;
-  left: 0px;
-  bottom: 232px;
+  box-sizing: border-box;
+  width: 360px;
+  min-height: 196px;
+  position: absolute;
+  top: 390px;
   background-color: #eeeeee;
   text-align:center;
-  padding: 36px 75px 0 75px;
-
+  padding: 36px 75px 0;
   color: #666666;
   font-size: 16px;
   line-height: 18px;
@@ -400,7 +397,7 @@ a   {
 
 .modal      {
   background-color: #ffffff;
-  display: none;
+  display: block;
 }
 
 .modal h2      {
