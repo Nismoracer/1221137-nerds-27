@@ -30,6 +30,7 @@ a   {
 
 .main-header      {
   background-color: #eeeeee;
+  min-height: 115px;
 }
 
 .site-navigation,
@@ -60,7 +61,7 @@ a   {
 }
 
 .main-logo:active     {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .banner-top h2    {
@@ -70,33 +71,42 @@ a   {
 }
 
 .button-red    {
+  display: block;
+  width: 160px;
+  height: 50px;
   background-color: #fb565a;
   color: #ffffff;
-  line-height: 18px;
+  line-height: 50px;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .button-green    {
+  display: block;
+  width: 160px;
+  height: 50px;
   background-color: #00ca74;
   color: #ffffff;
-  line-height: 18px;
+  line-height: 50px;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  border-radius: 1px;
+  border-radius: 3px;
 }
 
 .button-yellow    {
+  display: block;
+  width: 160px;
+  height: 50px;
   background-color: #efc84a;
   color: #ffffff;
-  line-height: 18px;
+  line-height: 50px;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  border-radius: 1px;
+  border-radius: 3px;
 }
 
 .button-red:hover     {
@@ -124,6 +134,26 @@ a   {
 .button-yellow:active     {
   background-color: #e5a722;
   color: rgba(255, 255, 255, 0.3)
+}
+
+.slider-button     {
+  width: 240px;
+  height: 50px;
+}
+
+.catalog-button     {
+  width: 200px;
+  height: 50px;
+}
+
+.map-button     {
+  width: 220px;
+  height: 50px;
+}
+
+.feedback-button    {
+  width: 260px;
+  height: 50px;
 }
 
 .banner-top     {
@@ -193,15 +223,15 @@ a   {
 }
 
 .partners-list a     {
-  opacity: 20%;
+  opacity: 0.2;
 }
 
 .partners-list a:hover     {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .partners-list a:active     {
-  opacity: 20%;
+  opacity: 0.2;
 }
 
 /* Стили страницы Catalog */
@@ -246,11 +276,15 @@ a   {
 }
 
 .button-grey      {
+  display: block;
+  width: 260px;
+  height: 50px;
   background-color: #eeeeee;
-  border-radius: 1px;
+  border-radius: 3px;
+  border-color: transparent;
   text-transform: uppercase;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 50px;
 }      
 
 .button-grey:hover     {
@@ -281,14 +315,14 @@ a   {
   text-transform: uppercase;
   font-weight: 400;
   color: #000000;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .sort-item:hover      {
-  opacity: 60%;
+  opacity: 0.6;
 }
 .sort-item:active      {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .sort-item-active     {
@@ -305,10 +339,21 @@ a   {
 .page-container      {
   width: 360px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .page-header    {
-  opacity: 12%;
+  opacity: 0.1;
+}
+
+.page-container:hover .page-header      {
+  opacity: 1;
+}
+
+.page-container:hover .popup-info      {
+  display: block;
 }
 
 .popup-info     {
@@ -316,18 +361,19 @@ a   {
   width: 360px;
   min-height: 196px;
   position: absolute;
-  top: 390px;
+  bottom: 0;
   background-color: #eeeeee;
-  text-align:center;
-  padding: 36px 75px 0;
+  text-align: center;
+  padding: 35px 75px 44px;
   color: #666666;
   font-size: 16px;
   line-height: 18px;
+  display: none;
 }
 
 .popup-info h3     {
   font-size: 16px;
-  line-height: 18px;
+  line-height: 16px;
   text-transform: uppercase;
   font-weight: 700;
   color: #000000;
@@ -345,30 +391,36 @@ a   {
   list-style: none;
 }
 
-.catalog-pagination-active    {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #000000;
-  text-align: center;
-  background-color: #ffffff;
-  border: 2px solid #eeeeee;
-}
-
 .catalog-pagination-item     {
+  display: block;
+  width: 50px;
+  height: 50px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 50px;
   text-transform: uppercase;
   color: #000000;
   text-align: center;
   background-color: #eeeeee;
 }
 
-.catalog-pagination-item:hover     {
+.pagination-active    {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+  pointer-events: none;
+}
+
+.pagination-next     {
+  width: 260px;
+}
+
+.catalog-pagination-item:hover:not(.pagination-active)     {
   background-color: #dfdfdf;
 }
 
-.catalog-pagination-item:active     {
+.catalog-pagination-item:active:not(.pagination-active)     {
   background-color: #d5d5d5;
   color: #a9a9a9;
   box-shadow: 0 -2px 0 0 #a9a9a9;
@@ -413,35 +465,29 @@ a   {
   font-weight: 700;
 }
 
-.feedback-form input,
-.feedback-form textarea      {
+.input-field      {
+  padding-left: 15px;
   font: inherit;
   color: #444444;
-
   background-color: #ffffff;
   border: 2px solid #e1e1e1;
 }
 
-  /* Не работает */
 .feedback-form::-webkit-input-placeholder     {
   color: #444444;
-  padding-left: 16px;
   font-size: 16px;
   line-height: 18px;
 }
 .feedback-form::-moz-placeholder     {
   color: #444444;
-  padding-left: 16px;
   font-size: 16px;
   line-height: 18px;
 }
 .feedback-form:-ms-input-placeholder     {
   color: #444444;
-  padding-left: 16px;
   font-size: 16px;
   line-height: 18px;
 }
-  /*         */
 
 .feedback-form input:focus,
 .feedback-form textarea:focus {
@@ -469,7 +515,7 @@ a   {
 
 .main-footer-social a:active   {
   background-color: #d7373b;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .main-footer  h3    {
