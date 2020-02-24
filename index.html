@@ -9,67 +9,76 @@
 </head>
 <body>
     <header class="main-header">
-        <nav>  
-            <a class="main-logo" href="">
-            <img src="img/logo.svg" width="160" height="67" alt="Логотип веб-студии «Нёрдс»">  
-            </a>
-            <ul class="site-navigation">  
-                <li><a href="" class="site-navigation-active">Студия</a></li>
-                <li><a href="">Клиенты</a></li>
-                <li><a href="catalog.html">Магазин</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
-            <ul class="user-navigation">
-                <li>
-                    <a href="">Корзина</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>  
+                <a class="main-logo" href="">
+                <img src="img/logo.svg" width="160" height="67" alt="Логотип веб-студии «Нёрдс»">  
+                </a>
+                <ul class="site-navigation">  
+                    <li><a href="" class="site-navigation-active">Студия</a></li>
+                    <li><a href="">Клиенты</a></li>
+                    <li><a href="catalog.html">Магазин</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+                <ul class="user-navigation">
+                    <li>
+                        <a href="">Корзина</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
+    <main>
         <h1 class="visually-hidden">«Вебстудия Нёрдс»: Веб-сайты, приложения, презентации</h1>
 
         <!--Слайдер-->
 
         <section class="banner-top">
-            <h2>Долго, дорого,  скрупулезно.</h2>
-            <p>Математически выверенный дизайн  для вашего сайта или мобильного приложения.</p>
-            <a class="button-red slider-button" href="catalog.html">Узнать больше</a>
-
-            <!--Пока не знаю структуру, тк не знаю как будет реализовано. Буду оживлять чз JS-->
-            <div class="slider">
-                <img src="img/slide1.png" alt="Рекламный слайдер" width="698" height="413">
-                <ul class="pagination">
-                    <li>
-                        <a href=""><div class="pagination-item  pagination-item-current"></div></a>
-                    </li>
-                    <li>
-                        <a href=""><div class="pagination-item"></div></a>
-                    </li>
-                    <li>
-                        <a href=""><div class="pagination-item"></div></a>
-                    </li>
-                </ul>
-            </div>
+            <div class="container">
+                <div class="columns">
+                    <div class="left-column">
+                        <h2>Долго, дорого,  скрупулезно.</h2>
+                        <p>Математически выверенный дизайн  для вашего сайта или мобильного приложения.</p>
+                        <a class="button-red slider-button" href="catalog.html">Узнать больше</a>
+                    </div>
+                    <!--Пока не знаю структуру, тк не знаю как будет реализовано. Буду оживлять чз JS-->
+                    <div class="slider">
+                        <img src="img/slide1.png" alt="Рекламный слайдер" width="698" height="413">
+                            <div class="pagination">
+                                <ul>
+                                    <li>
+                                        <a href="" class="pagination-item  pagination-item-current"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="pagination-item"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="pagination-item"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>    
         </section>
 
-        <section class="variety">
+        <section class="variety container">
             <h2 class="visually-hidden">Предоставляемые услуги</h2>
             <ul class="variety-list">
-                <li>
+                <li class="variety-item">
                     <h3>Веб-сайты</h3>
                     <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
                     <img src="img/laptop_logo.png" Alt="Разработка веб-сайтов" width="300" height="146">
                     <a href="" class="button-red index-button">Заказать</a>
                 </li>
-                <li>
+                <li class="variety-item">
                     <h3>Приложения</h3>
                     <p>Покорите топ-10 приложений в AppStore и Google Play</p>
                     <img src="img/phone_logo.png" Alt="Создание приложений" width="300" height="146">
                     <a href="" class="button-green">Заказать</a>
                 </li>
-                <li>
+                <li class="variety-item">
                     <h3>Презентации</h3>
                     <p>Вы даже не подозреваете,  насколько вы изумительны!</p>
                     <img src="img/presentation_logo.png" Alt="Создание презентаций" width="300" height="146">
@@ -78,39 +87,41 @@
             </ul>
         </section>
         <!--Информационный блок-->
-        <section class="about">
-            <h2>Мы — маленькая, но гордая  дизайн-студия из Краснодара. </h2>
-            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-            <h3>Выполняем заказы на разработку:</h3>   
-            <ul class="about-list">
-                <li>Веб-сайтов любой сложности</li>
-                <li>Мобильных приложений для iOS и Android</li>
-                <li>Слайдшоу и видео для корпоративных презентаций</li>
-            </ul>
+        <section class="about container">
+            <div class="about-left-column">
+                <h2>Мы — маленькая, но гордая  дизайн-студия из Краснодара. </h2>
+                <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+                <h3>Выполняем заказы на разработку:</h3>   
+                <ul class="about-list">
+                    <li>Веб-сайтов любой сложности</li>
+                    <li>Мобильных приложений для iOS и Android</li>
+                    <li>Слайдшоу и видео для корпоративных презентаций</li>
+                </ul>
+            </div>
             <div class="about-right-column">
-                <figure>
-                    <img src="img/balloons.png" alt="«Вебстудия Нёрдс» - с 2004 года работаем для вас" width="360" height="208">
-                    <figcaption>с 2004 года Любим точность во всем:</figcaption>
-                </figure>
-            <ul class="about-right-column-list">
-                <li>
-                    <span>146<sup>%</sup></span>
-                    <p>Уровень самоотдачи</p>
-                </li>
-                <li>
-                    <span>100<sup>%</sup></span>
-                    <p>Соблюдение сроков</p>
-                </li>
-                <li>
-                    <span>50<sup>%</sup></span>
-                    <p>Минимальная предоплата</p>
-                </li>                    
-            </ul>
+                    <figure>
+                        <img src="img/balloons.png" alt="«Вебстудия Нёрдс» - с 2004 года работаем для вас" width="360" height="208">
+                        <figcaption>с 2004 года Любим точность во всем:</figcaption>
+                    </figure>
+                <ul class="about-right-column-list">
+                    <div class="about-right-column-item">
+                        <span>146<sup>%</sup></span>
+                        <p>Уровень самоотдачи</p>
+                    </div>
+                    <div class="about-right-column-item">
+                        <span>100<sup>%</sup></span>
+                        <p>Соблюдение сроков</p>
+                    </div>
+                    <div class="about-right-column-item">
+                        <span>50<sup>%</sup></span>
+                        <p>Минимальная предоплата</p>
+                    </div>                    
+                </div>
             </div>
         </section>
 
         <!--Список проектов-->
-        <div class="partners">
+        <div class="partners container">
             <h2 class="visually-hidden">Наши работы</h2>
             <ul class="partners-list">
                 <li>
@@ -139,7 +150,8 @@
 
         <section class="map">
             <h2 class="visually-hidden">Наш адрес</h2>
-            <img src="img/map.png" Alt="Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8" width="1440" height="416">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CKayySZ~" width="1440" height="418" frameborder="1" allowfullscreen="true"></iframe>
+            <p class="address"><img src="img/map.png" Alt="Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8" width="1440" height="418"></p>
             <div class="map-label">
                 <h3>Nёrds design studio</h3>
                 <p>191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8 </p>
@@ -149,20 +161,20 @@
         </section>
 
     </main>
-    <footer class="main-footer">
-        <div class="main-footer-social">
-            <ul>
+    <footer class="main-footer container">
+            <ul class="main-footer-social">
                 <!--ARIA тк текст заменится на картинки-->
-                <li><a class="social-button" href="" aria-label="Вконтакте">Вконтакте</a></li>
-                <li><a class="social-button" href="" aria-label="Фейсбук">Фейсбук</a></li>      
-                <li><a class="social-button" href="" aria-label="Инстаграм">Инстаграм</a></li>        
+                <li><a class="social-button" href="" aria-label="Вконтакте">Вк</a></li>
+                <li><a class="social-button" href="" aria-label="Фейсбук">Фб</a></li>      
+                <li><a class="social-button" href="" aria-label="Инстаграм">Инст</a></li>        
             </ul>
+        <div class="main-footer-discount">
+            <h3>Давайте дружить, это выгодно!</h3>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
-        <h3>Давайте дружить, это выгодно!</h3>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
     </footer>
 
-    <section class="modal">       <!--Модальное окно "Напишите нам-->
+    <section class="modal visually-hidden">       <!--Модальное окно "Напишите нам-->
         <h2>Напишите нам</h2>
         <form class="feedback-form" action="index.html" method="POST">
             <label for="surname">Ваше имя:</label>
