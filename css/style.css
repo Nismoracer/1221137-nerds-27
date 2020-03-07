@@ -82,6 +82,10 @@ a   {
   padding-bottom: 13px;
 }
 
+.site-navigation .border-shift  {
+  padding-bottom: 9px;
+}
+
 .cart     {
   box-sizing: border-box;
   padding-left: 39px;
@@ -219,11 +223,10 @@ a   {
 .pagination-item-active::after     {
   position: absolute;
   content: "";
-  width: 4px;
-  height: 4px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  top: 4px;
+  left: 4px;
   border: 2px solid #c2c2c2;
   border-radius: 50%;
 }
@@ -809,7 +812,7 @@ a   {
 }
 .min-price input  {
   margin-left: 7px;
-  padding-left: 15px;
+  padding-left: 5px;
 }
 
 .max-price  {
@@ -819,7 +822,7 @@ a   {
 }
 .max-price input  {
   margin-left: 8px;
-  padding-left: 13px;
+  padding-left: 0px;
 }
 
 .price-control label  {
@@ -1070,6 +1073,11 @@ fieldset  {
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 33px;
+}
+
+.page-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 .page-container:nth-of-type(2n)   {
