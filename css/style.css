@@ -162,6 +162,7 @@ a   {
   text-align: left;
   padding-top: 30px;
   padding-bottom: 80px;
+  background-color: #eeeeee;
   background-image: url(../img/slide1.png);
   background-repeat: no-repeat;
   background-position: 431px bottom;
@@ -174,6 +175,7 @@ a   {
   text-align: left;
   padding-top: 30px;
   padding-bottom: 80px;
+  background-color: #eeeeee;
   background-image: url(../img/slide2.png);
   background-repeat: no-repeat;
   background-position: 485px bottom;
@@ -186,6 +188,7 @@ a   {
   text-align: left;
   padding-top: 30px;
   padding-bottom: 80px;
+  background-color: #eeeeee;
   background-image: url(../img/slide3.png);
   background-repeat: no-repeat;
   background-position: 404px bottom;
@@ -218,6 +221,7 @@ a   {
   border: 1px solid #ffffff;
   border-radius: 50%;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .pagination-item-active::after     {
@@ -256,6 +260,7 @@ a   {
   position: absolute;
   width: 300px;
   height: 146px;
+  background-color: #fb565a;
   background-image: url("../img/laptop_logo.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -268,6 +273,7 @@ a   {
   position: absolute;
   width: 300px;
   height: 146px;
+  background-color: #00ca74;
   background-image: url("../img/phone_logo.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -280,6 +286,7 @@ a   {
   position: absolute;
   width: 300px;
   height: 146px;
+  background-color: #efc849;
   background-image: url("../img/presentation_logo.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -378,6 +385,7 @@ a   {
 
 .about-right-column-left      {
   display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   width: 100px;
   padding-top: 9px;
@@ -386,6 +394,7 @@ a   {
 
 .about-right-column-mid      {
   display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   width: 114px;
   padding-top: 9px;
@@ -393,6 +402,7 @@ a   {
 }
 .about-right-column-right      {
   display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   width: 125px;
   padding-top: 9px;
@@ -449,6 +459,7 @@ _:-ms-fullscreen, :root .partners-list   {
 }
 
 .partners-item    {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -479,7 +490,6 @@ _:-ms-fullscreen, :root .partners-list   {
   padding-top: 14px;
   padding-left: 20px;
 }
-
 
 .partners-item::before    {
   box-sizing: inherit;
@@ -651,7 +661,6 @@ _:-ms-fullscreen, :root .partners-list   {
   color: #ffffff;
   line-height: 50px;
   text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
   border-radius: 3px;
   margin-top: 32px;
@@ -665,7 +674,6 @@ _:-ms-fullscreen, :root .partners-list   {
   color: #ffffff;
   line-height: 50px;
   text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
   border-radius: 3px;
   margin-top: 32px;
@@ -811,6 +819,7 @@ _:-ms-fullscreen, :root .partners-list   {
 
 .min-price  {
   display: inline-block;
+  vertical-align: top;
   width: 50%;
   text-align: left;
 }
@@ -821,6 +830,7 @@ _:-ms-fullscreen, :root .partners-list   {
 
 .max-price  {
   display: inline-block;
+  vertical-align: top;
   width: 50%;
   text-align: right;
 }
