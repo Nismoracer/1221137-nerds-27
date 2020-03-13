@@ -16,9 +16,9 @@
                 </a>
                 <ul class="site-navigation">  
                     <li><a href="index.html">Студия</a></li>
-                    <li><a href="">Клиенты</a></li>
+                    <li><a href="index.html#clients">Клиенты</a></li>
                     <li><a href="" class="navigation-active border-shift">Магазин</a></li>
-                    <li><a href="">Контакты</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
                 <ul class="user-navigation">
                     <li>
@@ -204,15 +204,15 @@
         </div>
          <!--Интерактивная карта с кнопкой "Напишите нам"-->
 
-         <section class="map">
+         <section class="map" id="contacts">
             <h2 class="visually-hidden">Наш адрес</h2>
             <iframe class="map_properties" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056454!2d30.32085335126752!3d59.93871916896573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1582611700977!5m2!1sen!2sru" width="1440" height="418" style="border:0;" allowfullscreen=""></iframe>
             <p class="address"><img class="map_properties" src="img/map.png" Alt="Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8"></p>
             <div class="map-label">
                 <h3>Nёrds design studio</h3>
                 <p>191186, Санкт-Петербург,<br>  ул. Б. Конюшенная, д. 19/8 </p>
-                <p>тел. +7 (812) 275-75-75</p>
-                <a class="button-red map-button" href="">напишите нам</a>
+                <a href="tel:+78122757575" class=tel><p>тел. +7 (812) 275-75-75</p></a>
+                <a class="button-red map-button" href="write-us.html">напишите нам</a>
             </div>
         </section>
 
@@ -266,7 +266,7 @@
             <div class="name_surname">
             <p>
                 <label for="surname">Ваше имя:</label>
-                <input class="input-field" type="text" name="surname" placeholder="Имя Фамилия" id="surname">
+                <input class="input-field" type="text" name="surname" placeholder="Имя Фамилия" id="surname" required>
             </p>
             <p>
                 <label for="email">Ваше e-mail:</label>
@@ -275,12 +275,14 @@
             </div>
             <p>
                 <label for="letter">Текст письма:</label>
-                <textarea class="input-field" name="letter" placeholder="В свободной форме" id="letter"></textarea>   
+                <textarea class="input-field" name="letter" placeholder="В свободной форме" id="letter" required></textarea>   
             </p>
             <button class="button-red feedback-button" type="submit">Отправить</button>       
         </form>
         <button type="button" class="modal-close"></button>
     </section>
+    <script src="js/script.js">
+    </script>
 
 </body>
 </html>
