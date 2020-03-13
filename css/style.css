@@ -196,6 +196,18 @@ a   {
   display: none;
 }
 
+.article1 h2, 
+.article2 h2,
+.article3 h2   {
+  max-width: 520px;
+}
+
+.article1 p, 
+.article2 p,
+.article3 p   {
+  max-width: 410px;
+}
+
 .pagination     {
   position: absolute;
   left: 536px;
@@ -241,6 +253,7 @@ a   {
   margin-top: 79px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   border-bottom: 2px solid #eeeeee;
 }
 
@@ -314,7 +327,7 @@ a   {
 }
 
 
-.variety-item:last-of-type    {
+.variety-item:nth-of-type(3n)    {
   margin-right: 0;
 }
 
@@ -467,27 +480,44 @@ _:-ms-fullscreen, :root .partners-list   {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  opacity: 0.2;
   width: 300px;
 }
 
-.partner-one    {
+.partners-item:nth-of-type(1)  {
   width: 280px;
+}
+
+.partners-item:nth-of-type(1)::before  {
+  background-color: transparent;
+}
+
+.partners-item:nth-of-type(n+4)  {
+  width: 280px;
+}
+
+.partners-item:nth-of-type(n+4)::before  {
+  background-color: transparent;
+}
+
+.partners-item:nth-of-type(4n)  {
+  width: 280px;
+}
+
+.partner-academy    {
   padding-top: 20px;
   padding-right: 19px;
 }
 
-.partner-two    {
+.partner-barber    {
   padding-top: 8px;
 }
 
-.partner-three    {
+.partner-pink    {
   padding-top: 11px;
   padding-left: 2px;
 }
 
-.partner-four    {
-  width: 280px;
+.partner-mishka    {
   padding-top: 14px;
   padding-left: 20px;
 }
@@ -500,19 +530,19 @@ _:-ms-fullscreen, :root .partners-list   {
   height: 52px;
   top: center;
   left: 0;
-  background-color: #000000;
-} 
- 
-.partners-item:first-of-type::before      {
-  background-color: transparent;
+  background-color: #eeeeee;
 } 
 
-.partners-item:hover     {
+.partners-item a     {
+  opacity: 0.2;
+}
+
+.partners-item  a:hover   {
   opacity: 1;
 }
 
-.partners-item:active     {
-  opacity: 0.2;
+.partners-item a:active     {
+  opacity: 0.1;
 }
 
 .map      {
@@ -554,6 +584,7 @@ _:-ms-fullscreen, :root .partners-list   {
   padding-top: 48px;
   padding-left: 51px;
   padding-right: 50px;
+  padding-bottom: 47px;
 }
 
 .map-label  h3      {
@@ -592,15 +623,17 @@ _:-ms-fullscreen, :root .partners-list   {
   list-style: none;
   margin: 0;
   padding: 0;
-  width:282px;
+  width: 282px;
   margin-top: 60px;
 }
 
 .main-footer-discount       {
   margin: 0;
   padding: 0;
+  width: 760px;
   margin-top: 61px;
   margin-left: 119px;
+  word-wrap: break-word;
 }
 
 .main-footer-discount  h3   {
@@ -648,24 +681,30 @@ _:-ms-fullscreen, :root .partners-list   {
 
 .button-red    {
   display: block;
+  box-sizing: border-box;
   width: 240px;
-  height: 50px;
   background-color: #fb565a;
   color: #ffffff;
-  line-height: 50px;
+  border: none;
+  line-height: 18px;
+  padding: 16px 10px;
   text-align: center;
+  word-wrap: break-word;
   text-transform: uppercase;
   border-radius: 3px;
 }
 
 .button-green    {
   display: block;
+  box-sizing: border-box;
   width: 160px;
-  height: 50px;
   background-color: #00ca74;
   color: #ffffff;
-  line-height: 50px;
+  border: none;
+  line-height: 18px;
+  padding: 16px 10px;
   text-align: center;
+  word-wrap: break-word;
   text-transform: uppercase;
   border-radius: 3px;
   margin-top: 32px;
@@ -673,12 +712,15 @@ _:-ms-fullscreen, :root .partners-list   {
 
 .button-yellow    {
   display: block;
+  box-sizing: border-box;
   width: 160px;
-  height: 50px;
   background-color: #efc84a;
   color: #ffffff;
-  line-height: 50px;
+  border: none;
+  line-height: 18px;
+  padding: 16px 10px;
   text-align: center;
+  word-wrap: break-word;
   text-transform: uppercase;
   border-radius: 3px;
   margin-top: 32px;
@@ -713,7 +755,6 @@ _:-ms-fullscreen, :root .partners-list   {
 
 .slider-button     {
   width: 240px;
-  height: 50px;
   margin-top: 40px;
 }
 
@@ -726,13 +767,14 @@ _:-ms-fullscreen, :root .partners-list   {
 .catalog-button     {
   margin: 0 auto;
   width: 200px;
-  height: 50px;
+  margin-top: 30px;
+  padding-top: 17px;
+  padding-bottom: 15px;
 }
 
 .map-button     {
   margin-top: 23px;
   width: 220px;
-  height: 50px;
 }
 
 .catalog-banner     {
@@ -746,6 +788,7 @@ _:-ms-fullscreen, :root .partners-list   {
   margin: 0;
   padding: 0;
   font-size: 55px;
+  font-weight: 500;
   line-height: 55px;
   padding-top: 76px;
   color: #000000;
@@ -980,15 +1023,19 @@ fieldset  {
 
 .button-grey      {
   display: block;
+  box-sizing: border-box;
   width: 260px;
-  height: 50px;
   background-color: #eeeeee;
+  border: none;
+  line-height: 18px;
+  padding: 17px 10px 15px 10px;
+  text-align: center;
+  word-wrap: break-word;
   border-radius: 3px;
   border-color: transparent;
   text-transform: uppercase;
   font-size: 16px;
   cursor: pointer;
-  line-height: 50px;
   margin-top: 38px;
 }      
 
@@ -1138,6 +1185,7 @@ _:-ms-fullscreen, :root .page-container   {
 
 .popup-info h3     {
   margin: 0;
+  word-wrap: break-word;
   margin-top: 26px;
   padding-bottom: 15px;
   font-size: 18px;
@@ -1150,7 +1198,7 @@ _:-ms-fullscreen, :root .page-container   {
 .popup-info p   {
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  word-wrap: break-word;
 }
 
 .popup-info h3:hover     {
@@ -1177,11 +1225,11 @@ _:-ms-fullscreen, :root .page-container   {
 
 .catalog-pagination-item     {
   display: block;
-  width: 48px;
-  height: 48px;
+  min-width: 38px;
+  padding: 15px 5px;
   margin-right: 13px;
   font-size: 16px;
-  line-height: 48px;
+  line-height: 18px;
   text-transform: uppercase;
   color: #000000;
   text-align: center;
@@ -1189,16 +1237,16 @@ _:-ms-fullscreen, :root .page-container   {
 }
 
 .pagination-active    {
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
+  padding: 13px 5px;
+  min-width: 34px;
+  line-height: 18px;
   background-color: #ffffff;
   border: 2px solid #eeeeee;
   pointer-events: none;
 }
 
 .catalog-pagination li:last-child a {
-  width: 259px;
+  min-width: 249px;
 }
 
 .catalog-pagination-item:hover:not(.pagination-active)     {
@@ -1331,8 +1379,12 @@ _:-ms-fullscreen, :root .page-container   {
 .feedback-button    {
   margin-top: 45px;
   width: 262px;
-  height: 52px;
+  box-sizing: border-box;
   cursor: pointer;
+  padding: 17px 10px;
+  text-align: center;
+  word-wrap: break-word;
+
 }
 
 .feedback-form::-webkit-input-placeholder     {
@@ -1372,11 +1424,11 @@ _:-ms-fullscreen, :root .page-container   {
   0% {
     transform: translate(2000px, 2000px);
   }
-  70% {
+  50% {
     transform: translate(300px, 300px);
   }
   90% {
-    transform: translate(10px, 10px);
+    transform: translate(100px, 100px);
   }
   100% {
     transform: translate(0px, 0px);
