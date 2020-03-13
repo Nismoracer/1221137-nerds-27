@@ -1157,6 +1157,11 @@ _:-ms-fullscreen, :root .page-container   {
 }
 
 .page-header     {
+  width: 360px;
+  height: 40px;
+  background-image: url("../img/browser.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   opacity: 0.1;
 }
 
