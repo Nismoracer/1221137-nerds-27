@@ -17,43 +17,54 @@ var storEmail = '';
 try {
     storSurname = localStorage.getItem('surname');
     storEmail = localStorage.getItem('email');
-}   catch (err)     {
+}   catch (err)  {
     isStorageSupport = false;
 }
 
-writeus.addEventListener("click", function(evt)     {
+writeus.addEventListener("click", function(evt)  {
     evt.preventDefault();
+    if (popup.classList.contains('modal-exit'))  {
+        popup.classList.remove('modal-exit'); 
+    }
+    if (popup.classList.contains('modal-error'))  {
+        popup.classList.remove('modal-error'); 
+    }
+    popup.classList.remove("element-hide");
     popup.classList.add("element-show");
     popup.classList.add("modal-animation");
     surname.style.border = '2px solid #e1e1e1';
     letter.style.border = '2px solid #e1e1e1';
-    if (storSurname)    {
+    if (storSurname)  {
         surname.value = storSurname;
         email.value = storEmail;
     }
 });
 
-closeBut.addEventListener("click", function(evt)     {
-    console.log('yo~');
+closeBut.addEventListener("click", function(evt)  {
     evt.preventDefault();
-    popup.classList.remove('element-show');
-    popup.classList.remove('modal-animation');
-    popup.classList.add('element-hide');
-    surname.value = '';
-    email.value  = ''
-    letter.value  = '';
+    popup.classList.add('modal-exit');
+    setTimeout(function(){
+        popup.classList.remove('modal-animation');
+        popup.classList.remove('element-show');
+        popup.classList.add('element-hide');
+        surname.value = '';
+        email.value = ''
+        letter.value = '';
+        }, 500);
 });
 
-window.addEventListener('keydown', function(evt)    {
+window.addEventListener('keydown', function(evt)  {
     if (evt.keyCode == 27)  {
         evt.preventDefault();
-        if (popup.classList.contains('element-show'))    {
-            popup.classList.remove('element-show'); 
-            popup.classList.remove('element-hide'); 
-        }
-        surname.value  = '';
-        email.value  = ''
-        letter.value  = '';
+        popup.classList.add('modal-exit');
+        setTimeout(function(){
+            popup.classList.remove('modal-animation');
+            popup.classList.remove('element-show');
+            popup.classList.add('element-hide');
+            surname.value = '';
+            email.value = ''
+            letter.value = '';
+          }, 500);
     }
     if (surname.value)  {
         surname.style.border = '2px solid #e1e1e1';
@@ -64,26 +75,29 @@ window.addEventListener('keydown', function(evt)    {
 });
 
 form.addEventListener('submit', function(evt)  {
-    if (!surname.value || !letter.value)    {
+    if (!surname.value || !letter.value)  {
     evt.preventDefault();
     surname.style.border = "2px solid #e1e1e1";
     letter.style.border = "2px solid #e1e1e1";
-        if (!surname.value)   {
+        if (!surname.value)  {
         surname.style.border = '2px solid #e74246';
         }
-        if (!letter.value)    {
+        if (!letter.value)  {
         letter.style.border = '2px solid #e74246';
         }
-    }
-    else {
-        if (isStorageSupport)   {
+        popup.classList.remove('modal-error');
+        popup.offsetWidth = popup.offsetWidth; 
+        popup.classList.add('modal-error');
+        }
+    else  {
+        if (isStorageSupport)  {
         localStorage.setItem('surname', surname.value);
         localStorage.setItem('email', email.value);
         }
     }
 });
 
-function currentSlide(n)    {
+function currentSlide(n)  {
     if (n === 1)
     {
         art1.style.display = "block";

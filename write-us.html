@@ -11,8 +11,8 @@
     <header class="main-header">
         <div class="container">
             <nav>  
-                <a class="main-logo" href="">
-                <img src="img/logo.svg" width="160" height="67" alt="Логотип веб-студии «Нёрдс»">  
+                <a class="main-logo">
+                    <img src="img/logo.svg" width="160" height="67" alt="Логотип веб-студии «Нёрдс»">  
                 </a>
                 <ul class="site-navigation">  
                     <li><a href="" class="navigation-active">Студия</a></li>
@@ -31,27 +31,28 @@
 
     <main>
         <h1 class="visually-hidden">«Вебстудия Нёрдс»: Веб-сайты, приложения, презентации</h1>
+
         <!--Слайдер-->
         <section class="banner-top">
             <div class="container">
                 <div class="article1">
-                        <h2>Долго, дорого,<br>скрупулезно.</h2>
-                        <p>Математически выверенный дизайн</p>
-                        <p>для вашего сайта или мобильного приложения.</p>
-                        <a class="button-red slider-button" href="catalog.html">Узнать больше</a>
-                        <div class="pagination">
-                            <ul>
-                                <li>
-                                    <button class="pagination-item pagination-item-active" onclick="currentSlide(1)"></button>
-                                </li>
-                                <li>
-                                    <button class="pagination-item" onclick="currentSlide(2)"></button>
-                                </li>
-                                <li>
-                                    <button class="pagination-item" onclick="currentSlide(3)"></button>
-                                </li>
-                            </ul>
-                        </div>
+                    <h2>Долго, дорого,<br>скрупулезно.</h2>
+                    <p>Математически выверенный дизайн</p>
+                    <p>для вашего сайта или мобильного приложения.</p>
+                    <a class="button-red slider-button" href="catalog.html">Узнать больше</a>
+                    <div class="pagination">
+                        <ul>
+                            <li>
+                                <button class="pagination-item pagination-item-active" onclick="currentSlide(1)"></button>
+                            </li>
+                            <li>
+                                <button class="pagination-item" onclick="currentSlide(2)"></button>
+                            </li>
+                            <li>
+                                <button class="pagination-item" onclick="currentSlide(3)"></button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="article2">
                     <h2>Любим математику как никто другой</h2>
@@ -117,7 +118,8 @@
                 </ul>
             </div>
         </section>
-                <!--Информационный блок-->
+
+        <!--Информационный блок-->
         <section class="about">
             <div class="container">
                 <div class="wrapper-about">
@@ -152,6 +154,7 @@
                 </div>
             </div>
         </section>
+
         <!--Список проектов-->
         <div class="partners" id="clients">
             <div class="container">
@@ -180,11 +183,12 @@
                 </ul>
             </div>
         </div>
+
         <!--Интерактивная карта с кнопкой "Напишите нам"-->
         <section class="map" id="contacts">
             <h2 class="visually-hidden">Наш адрес</h2>
             <iframe class="map_properties" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056454!2d30.32085335126752!3d59.93871916896573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1582611700977!5m2!1sen!2sru" width="1440" height="418" style="border:0;" allowfullscreen=""></iframe>
-            <p class="address"><img class="map_properties" src="img/map.png" Alt="Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8"></p>
+            <p class="address"><img class="map_properties" src="img/map.png" alt="Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8" width="1440" height="418"></p>
             <div class="map-label">
                 <h3>Nёrds design studio</h3>
                 <p>191186, Санкт-Петербург,<br>  ул. Б. Конюшенная, д. 19/8 </p>
@@ -236,18 +240,19 @@
         </div>
     </footer> 
 
-    <section class="modal" style="display:block;">      <!--Модальное окно "Напишите нам-->
+    <!--Модальное окно "Напишите нам-->
+    <section class="modal" style="display:block;">
         <h2>Напишите нам</h2>
         <form class="feedback-form" action="index.html" method="POST">
             <div class="name_surname">
-            <p>
-                <label for="surname">Ваше имя:</label>
-                <input class="input-field" type="text" name="surname" placeholder="Имя Фамилия" id="surname" required>
-            </p>
-            <p>
-                <label for="email">Ваше e-mail:</label>
-                <input class="input-field" type="email" name="email" placeholder="email@example.com" id="email">
-            </p>
+                <p>
+                    <label for="surname">Ваше имя:</label>
+                    <input class="input-field" type="text" name="surname" placeholder="Имя Фамилия" id="surname" required>
+                </p>
+                <p>
+                    <label for="email">Ваше e-mail:</label>
+                    <input class="input-field" type="email" name="email" placeholder="email@example.com" id="email">
+                </p>
             </div>
             <p>
                 <label for="letter">Текст письма:</label>
