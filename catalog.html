@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Студия веб-разработки «Нёрдс»</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize_minimized.css">
+    <link rel="stylesheet" href="css/style_minimized.css">
 </head>
 <body>
     <header class="main-header">
@@ -112,28 +112,27 @@
                     <p>Сортировать:</p>
                     <ul class="sort-type">
                         <li>
-                            <a class="sort-item-active" href="#">по цене</a>
+                            <a class="sort-item-active" href="#" aria-label="Сортировать по цене">по цене</a>
                         </li>
                         <li>
-                            <a class="sort-item" href="#">по типу</a>
+                            <a class="sort-item" href="#" aria-label="Сортировать по типу">по типу</a>
                         </li>
                         <li>
-                            <a class="sort-item" href="#">по названию</a>
+                            <a class="sort-item" href="#" aria-label="Сортировать по названию">по названию</a>
                         </li> 
                     </ul>    
                     <ul class="sort-direction">
                         <li>
-                            <a class="sort-item-active" href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Сначала дороже"></a>
+                            <a class="sort-item-active" href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Сначала дороже" aria-label="Сначала дороже"></a>
                         </li>    
                         <li>
-                            <a class="sort-item" href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Сначала дешевле"></a>
+                            <a class="sort-item" href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Сначала дешевле" aria-label="Сначала дешевле"></a>
                         </li>    
                     </ul>
                 </div>
                 <div class="catalog-list">
                     <div class="page-container">
                         <h3 class="visually-hidden">Шаблон сайта «Sedona»</h3>
-                        <div class="page-header"></div>
                         <img src="img/sedona_mini.jpg" width="360" height="576" Alt="Макет сайта Седона">                        
                         <div class="popup-info">
                             <a href="#"><h3>Sedona</h3></a>
@@ -144,7 +143,6 @@
                     </div>
                     <div class="page-container">
                         <h3 class="visually-hidden">Шаблон сайта «Pink app»</h3>
-                        <div class="page-header"></div>
                         <img src="img/pink_mini.jpg" width="360" height="576" Alt="Макет сайта Pink">                        
                         <div class="popup-info">
                             <a href="#"><h3>Pink app</h3></a>
@@ -155,7 +153,6 @@
                     </div>
                     <div class="page-container">
                         <h3 class="visually-hidden">Шаблон сайта «Бородинский»</h3>
-                        <div class="page-header"></div>
                         <img src="img/barbershop_mini.jpg" width="360" height="576" Alt="Макет сайта «Бородинский»">                        
                         <div class="popup-info">
                             <a href="#"><h3>Barbershop</h3></a>
@@ -166,7 +163,6 @@
                     </div>
                     <div class="page-container">
                         <h3 class="visually-hidden">Шаблон сайта «Mishka»</h3>
-                        <div class="page-header"></div>
                         <img src="img/mishka_mini.jpg" width="360" height="576" Alt="Макет сайта «Мишка»">                        
                         <div class="popup-info">
                             <a href="#"><h3>Mishka</h3></a>
@@ -177,7 +173,6 @@
                     </div>
                     <div class="page-container">
                         <h3 class="visually-hidden">Шаблон сайта «A plus»</h3>
-                        <div class="page-header"></div>
                         <img src="img/aplus_mini.jpg" width="360" height="576" Alt="Макет сайта «A plus»">                        
                         <div class="popup-info">
                             <a href="#"><h3>A plus</h3></a>
@@ -188,11 +183,11 @@
                     </div>
                     <div class="page-container">
                         <h3 class="visually-hidden">Шаблон сайта «Кваст»</h3>
-                        <div class="page-header"></div>
                         <img src="img/kvast_mini.jpg" width="360" height="576" Alt="Макет сайта «Кваст»">                        
                         <div class="popup-info">
                             <a href="#"><h3>Кваст</h3></a>
-                            <p>Промо-сайт производителя<br>крафтового кваса</p>
+                            <p>Промо-сайт производителя</p>
+                            <p>крафтового кваса</p>
                             <a href="#" class="button-red catalog-button">9900 руб.</a>
                         </div>
                     </div>
@@ -216,7 +211,7 @@
             <div class="map-label">
                 <h3>Nёrds design studio</h3>
                 <p>191186, Санкт-Петербург,<br>  ул. Б. Конюшенная, д. 19/8 </p>
-                <a href="tel:+78122757575" class=tel><p>тел. +7 (812) 275-75-75</p></a>
+                <a href="tel:+78122757575" class=tel>тел. +7 (812) 275-75-75</a>
                 <a class="button-red map-button" href="write-us.html">напишите нам</a>
             </div>
         </section>
@@ -275,7 +270,7 @@
                     <input class="input-field" type="text" name="surname" placeholder="Имя Фамилия" id="surname">
                 </p>
                 <p>
-                    <label for="email">Ваше e-mail:</label>
+                    <label for="email">Ваш e-mail:</label>
                     <input class="input-field" type="email" name="email" placeholder="email@example.com" id="email">
                 </p>
             </div>
@@ -285,9 +280,9 @@
             </p>
             <button class="button-red feedback-button" type="submit">Отправить</button>       
         </form>
-        <button type="button" class="modal-close"></button>
+        <button type="button" class="modal-close" aria-label="Закрыть окно"></button>
     </section>
-    <script src="js/script.js">
+    <script src="js/script_minimized.js">
     </script>
 
 </body>

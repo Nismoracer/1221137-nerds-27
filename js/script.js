@@ -1,18 +1,19 @@
-let art1 = document.querySelector(".article1");
-let art2 = document.querySelector(".article2");
-let art3 = document.querySelector(".article3");
+let article1 = document.querySelector('.article1');
+let article2 = document.querySelector('.article2');
+let article3 = document.querySelector('.article3');
 
-let writeus = document.querySelector(".map-button");
-let popup = document.querySelector(".modal");
-let closeBut = document.querySelector(".modal-close");
-var form = popup.querySelector('form');
-var surname = popup.querySelector('.feedback-form input[name=surname]');
-var email = popup.querySelector('.feedback-form input[name=email]');
-var letter = popup.querySelector('.feedback-form textarea[name=letter]');
+let writeus = document.querySelector('.map-button');
+let popup = document.querySelector('.modal');
+let closeBut = document.querySelector('.modal-close');
+let form = popup.querySelector('form');
+let surname = popup.querySelector('.feedback-form input[name=surname]');
+let email = popup.querySelector('.feedback-form input[name=email]');
+let letter = popup.querySelector('.feedback-form textarea[name=letter]');
+let grey = '2px solid #e1e1e1';
 
-var isStorageSupport = true;
-var storSurname = '';
-var storEmail = '';
+let isStorageSupport = true;
+let storSurname = '';
+let storEmail = '';
 
 try {
     storSurname = localStorage.getItem('surname');
@@ -21,7 +22,7 @@ try {
     isStorageSupport = false;
 }
 
-writeus.addEventListener("click", function(evt)  {
+writeus.addEventListener('click', function(evt)  {
     evt.preventDefault();
     if (popup.classList.contains('modal-exit'))  {
         popup.classList.remove('modal-exit'); 
@@ -29,18 +30,18 @@ writeus.addEventListener("click", function(evt)  {
     if (popup.classList.contains('modal-error'))  {
         popup.classList.remove('modal-error'); 
     }
-    popup.classList.remove("element-hide");
-    popup.classList.add("element-show");
-    popup.classList.add("modal-animation");
-    surname.style.border = '2px solid #e1e1e1';
-    letter.style.border = '2px solid #e1e1e1';
+    popup.classList.remove('element-hide');
+    popup.classList.add('element-show');
+    popup.classList.add('modal-animation');
+    surname.style.border = grey;
+    letter.style.border = grey;
     if (storSurname)  {
         surname.value = storSurname;
         email.value = storEmail;
     }
 });
 
-closeBut.addEventListener("click", function(evt)  {
+closeBut.addEventListener('click', function(evt)  {
     evt.preventDefault();
     popup.classList.add('modal-exit');
     setTimeout(function(){
@@ -67,18 +68,18 @@ window.addEventListener('keydown', function(evt)  {
           }, 500);
     }
     if (surname.value)  {
-        surname.style.border = '2px solid #e1e1e1';
+        surname.style.border = grey;
     }
     if (letter.value)  {
-        letter.style.border = '2px solid #e1e1e1';
+        letter.style.border = grey;
     }
 });
 
 form.addEventListener('submit', function(evt)  {
     if (!surname.value || !letter.value)  {
     evt.preventDefault();
-    surname.style.border = "2px solid #e1e1e1";
-    letter.style.border = "2px solid #e1e1e1";
+    surname.style.border = grey;
+    letter.style.border =  grey;
         if (!surname.value)  {
         surname.style.border = '2px solid #e74246';
         }
@@ -100,20 +101,20 @@ form.addEventListener('submit', function(evt)  {
 function currentSlide(n)  {
     if (n === 1)
     {
-        art1.style.display = "block";
-        art2.style.display = "none";
-        art3.style.display = "none";
+        article1.style.display = 'block';
+        article2.style.display = 'none';
+        article3.style.display = 'none';
     }
     if (n === 2)
     {
-        art1.style.display = "none";
-        art2.style.display = "block";
-        art3.style.display = "none";
+        article1.style.display = 'none';
+        article2.style.display = 'block';
+        article3.style.display = 'none';
     }
     if (n === 3)
     {
-        art1.style.display = "none";
-        art2.style.display = "none";
-        art3.style.display = "block";
+        article1.style.display = 'none';
+        article2.style.display = 'none';
+        article3.style.display = 'block';
     }
 }
