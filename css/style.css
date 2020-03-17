@@ -318,6 +318,7 @@ a  {
 .variety-item  p  {
   margin: 0;
   padding: 0;
+  max-width: 245px;
   font-weight: 400;
   letter-spacing: normal;
   text-align: left;
@@ -1206,9 +1207,15 @@ _:-ms-fullscreen, :root .partners-list  {
 }
 
 .popup-info p  {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  width: 227px;
+  text-align: inherit;
   word-wrap: break-word;
+}
+
+.popup-info .medium-width  {
+  width: 178px;
 }
 
 .popup-info h3:hover  {
