@@ -1155,7 +1155,7 @@ _:-ms-fullscreen, :root .partners-list  {
   height: 40px;
   top: 0;
   left: 0;
-  background-image: url(../img/browser.svg);
+  background-image: url("../img/browser.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.1;

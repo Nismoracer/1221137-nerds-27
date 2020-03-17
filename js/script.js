@@ -35,6 +35,7 @@ writeus.addEventListener('click', function(evt)  {
     popup.classList.add('modal-animation');
     surname.style.border = grey;
     letter.style.border = grey;
+    email.style.border = grey;
     if (storSurname)  {
         surname.value = storSurname;
         email.value = storEmail;
@@ -76,7 +77,7 @@ window.addEventListener('keydown', function(evt)  {
 });
 
 form.addEventListener('submit', function(evt)  {
-    if (!surname.value || !letter.value)  {
+    if (!surname.value || !letter.value || !email.value )  {
     evt.preventDefault();
     surname.style.border = grey;
     letter.style.border =  grey;
@@ -86,6 +87,9 @@ form.addEventListener('submit', function(evt)  {
         if (!letter.value)  {
         letter.style.border = '2px solid #e74246';
         }
+        if (!email.value)  {
+            email.style.border = '2px solid #e74246';
+            }
         popup.classList.remove('modal-error');
         popup.offsetWidth = popup.offsetWidth; 
         popup.classList.add('modal-error');
